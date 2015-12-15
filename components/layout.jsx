@@ -33,6 +33,9 @@ Layout = React.createClass({
     return (
       <div className="wrapper">
         <Alert/>
+        <header>
+          <AccountsUIWrapper/>
+        </header>
         {this.props.content}
       </div>
     );
