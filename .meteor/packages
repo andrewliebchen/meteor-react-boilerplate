@@ -29,8 +29,6 @@ cosmos:browserify
 
 
 momentjs:moment
-check
-audit-argument-checks
 accounts-ui-unstyled
 accounts-google
 alanning:roles

@@ -1,6 +1,4 @@
-const CSSTransitionGroup = React.addons.CSSTransitionGroup;
-
-App = React.createClass({
+Home = React.createClass({
   mixins: [ReactMeteorData],
 
   getMeteorData() {
@@ -15,12 +13,7 @@ App = React.createClass({
         <h1>Hello, World!</h1>
         <div className="posts">
           {this.data.posts.map((post, i) => {
-            return (
-              <div className="post">
-                <h2>{post.title}</h2>
-                <article>{post.content}</article>
-              </div>
-            );
+            return <PostContent post={post} key={i}/>;
           })}
         </div>
       </div>
@@ -37,7 +30,9 @@ if(Meteor.isClient) {
     action() {
       FlowRouter.subsReady('posts', () => {
         DocHead.setTitle('Meteor React Boilerplate');
-        ReactLayout.render(App);
+        ReactLayout.render(Layout, {
+          content: <Home/>
+        });
       });
     }
   });

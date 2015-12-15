@@ -1,5 +1,5 @@
 Meteor.publish(null, () => {
-  return Meteor.roles.find({})
+  return Meteor.roles.find({});
 });
 
 Meteor.publish('posts', () => {
@@ -7,6 +7,5 @@ Meteor.publish('posts', () => {
 });
 
 Meteor.publish('singlePost', (id) => {
-  check(id, String);
   return Posts.find({_id: id});
 });

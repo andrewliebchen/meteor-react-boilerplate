@@ -3,7 +3,6 @@ accounts-google@1.0.6
 accounts-oauth@1.1.8
 accounts-ui-unstyled@1.1.8
 alanning:roles@1.2.14
-audit-argument-checks@1.0.4
 autoupdate@1.2.4
 babel-compiler@5.8.24_1
 babel-runtime@0.1.4
