@@ -1,3 +1,5 @@
+.DS_Store
+
 packages/
 lib/app.browserify.js.cached
 lib/app.browserify.js.map
