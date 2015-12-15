@@ -1,0 +1,13 @@
+{
+  "AWSBucketName": "",
+  "AWSAccessKeyId": "",
+  "AWSSecretAccessKey": "",
+  "sendgrid": {
+    "username": "",
+    "password": "",
+    "host": ""
+  },
+  "public": {
+    "site_url": "http://localhost:3000"
+  }
+}
