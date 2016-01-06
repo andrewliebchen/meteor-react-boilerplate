@@ -1,3 +1,6 @@
+// Inspired by (okay, copied from)...
+// https://themeteorchef.com/recipes/roll-your-own-authentication/#tmc-configuring-third-party-services
+
 let cleanServiceConfiguration = (service, clientId, secret) => {
   ServiceConfiguration.configurations.remove({
     service: service
