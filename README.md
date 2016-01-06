@@ -22,7 +22,7 @@ make serve
 
 This is a simple alias for `meteor --settings settings.json`, which you're more than welcome to run...but the `make` command is much shorter 💁
 
-### Accounts
+### User accounts
 
 The [Service Configuration](https://atmospherejs.com/meteor/service-configuration) package allows you to configure accounts without using Meteor's Blaze-based UI. Add Facebook, Github, Google, or Twitter public and secret keys to `settings.json` and the boilerplate will take care of the rest...
 
@@ -44,8 +44,36 @@ For more about Roles, check out the documentation on Atmosphere or [Github](http
 
 ### Sending email from your app
 
+To send an email from your application, set up a free account with [Sendgrid](https://sendgrid.com/), then add your credentials to the email section of your `settings.json`. A general method to send email is available:
+
+```
+Meteor.call('sendEmail', {
+  to: 'user@example.com',
+  from: 'you@example.com',
+  subject: 'Lift off with Meteor',
+  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+});
+```
 
 ## Organization
+
+Directory structure should be recognizable if you're familiar with Meteor.
+
+### `/components`
+
+As you're building your app, most of your time will be spent in `/components`. This directory will house all of your React components. Since Meteor is an isomorphic JS framework, we can include client- and server-side in the same file.
+
+Generally you can have your React component, Flow Router routes, and server methods in the same file. This is pretty sweet because it represents a true _separation of concerns_ because each _file_ contains everything necessary for that component to function!
+
+Maybe this is a bad idea, I don't know. Make your own boilerplate.
+
+### `/lib`
+
+`/lib` contains a directory for React mixins. This ensures that mixins will be available before React components are loaded...
+
+### '/styles'
+
+The boilerplate uses Sass, but feel free to remove the `fourseven:scss` package if you want to use Less or CSS only.
 
 ## Dependencies & packages
 
