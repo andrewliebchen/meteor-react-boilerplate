@@ -4,7 +4,7 @@
     "accessKeyId": "",
     "secretAccessKey": ""
   },
-  "sendgrid": {
+  "email": {
     "username": "",
     "password": "",
     "host": ""

@@ -6,9 +6,9 @@ Issues and PR's welcome! In the meantime, the nirvana of Meteor/React awaits...
 
 ## Set up
 
-If you haven't already set up Meteor, do that first. [Follow these instructions](https://www.meteor.com/install). `git clone` or [download a ZIP](https://github.com/andrewliebchen/meteor-react-boilerplate/archive/master.zip) this repo to you local machine.
+If you haven't already set up Meteor, [do that first](https://www.meteor.com/install). `git clone` this repo or [download a ZIP](https://github.com/andrewliebchen/meteor-react-boilerplate/archive/master.zip) to your local machine.
 
-Next, you'll need to rename `example.settings.json` to just `settings.json`. You can take this opportunity to [set up accounts](###Accounts), or just leave it as is.
+You'll need to rename `example.settings.json` to just `settings.json`. You can take this opportunity to set up accounts (see the next section 👇), or just leave it as is.
 
 That's it! The first time you start the development server, Meteor will install all packages and dependencies. 🌟
 
@@ -20,7 +20,7 @@ To start a local development server, run:
 make serve
 ```
 
-This is a simple alias for `meteor --settings settings.json`, which you're more than welcome to run...but the `make` command is much shorter ;)
+This is a simple alias for `meteor --settings settings.json`, which you're more than welcome to run...but the `make` command is much shorter 💁
 
 ### Accounts
 
@@ -34,14 +34,16 @@ Account services set up links:
 
 ### User roles
 
-If you're building an application that requires user roles, I've included [Roles](https://atmospherejs.com/alanning/roles), a great package for creating, validating, and managing user roles. Once you've created at least one user via your UI or in `meteor shell`, you can promote that user to an admin by running:
+If you're building an application that requires user roles, I've included [Roles](https://atmospherejs.com/alanning/roles), a great package for creating, validating, and managing user roles. Once you've created at least one user via your UI or in `meteor shell`, you can promote that user to an admin by opening `meteor shell`, finding the ID of the user you want to promote, then run:
 
 ```
-meteor shell
 Roles.addUsersToRoles(USERID, ['admin'])
 ```
 
 For more about Roles, check out the documentation on Atmosphere or [Github](https://github.com/alanning/meteor-roles/).
+
+### Sending email from your app
+
 
 ## Organization
 
