@@ -31,6 +31,14 @@ Layout = React.createClass({
     content: React.PropTypes.element.isRequired
   },
 
+  componentWillMount() {
+    DocHead.addMeta({
+      rel: "icon",
+      type: "image/png",
+      href: "/favicon.png "
+    });
+  },
+
   render() {
     return (
       <div className="wrapper">
