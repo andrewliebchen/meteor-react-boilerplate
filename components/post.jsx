@@ -29,8 +29,11 @@ SinglePost = React.createClass({
   mixins: [ReactMeteorData],
 
   getMeteorData() {
+    let post = Posts.findOne();
+    DocHead.setTitle(`${post.title} on Meteor React Boilerplate`);
+    
     return {
-      post: Posts.findOne()
+      post: post
     };
   },
 
@@ -47,7 +50,6 @@ if(Meteor.isClient) {
 
     action(id) {
       FlowRouter.subsReady('posts', (id) => {
-        DocHead.setTitle(`${Posts.findOne().title} on Meteor React Boilerplate`);
         ReactLayout.render(Layout, {
           content: <SinglePost/>
         });
