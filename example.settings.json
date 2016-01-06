@@ -1,0 +1,33 @@
+// Rename this file settings.json
+
+{
+  "AWS": {
+    "bucketName": "",
+    "accessKeyId": "",
+    "secretAccessKey": ""
+  },
+  "sendgrid": {
+    "username": "",
+    "password": "",
+    "host": ""
+  },
+  "facebook": {
+    "appId": "",
+    "secret": ""
+  },
+  "github": {
+    "clientId": "",
+    "secret": ""
+  },
+  "google" : {
+    "clientId": "",
+    "secret": ""
+  },
+  "twitter": {
+    "consumerKey": "",
+    "secret": ""
+  },
+  "public": {
+    "site_url": "http://localhost:3000"
+  }
+}

@@ -1,5 +1,11 @@
+# System files
 .DS_Store
 
+# NPM packages don't need to be committed...
+# ...unless you're deploying to Modulus or Heroku!
 packages/
 lib/app.browserify.js.cached
 lib/app.browserify.js.map
+
+# Sensitive files
+settings.json

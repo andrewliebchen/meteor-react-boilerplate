@@ -25,6 +25,8 @@ Alert = React.createClass({
 });
 
 Layout = React.createClass({
+  mixins: [AccountActionsMixin],
+
   propTypes: {
     content: React.PropTypes.element.isRequired
   },
@@ -34,7 +36,9 @@ Layout = React.createClass({
       <div className="wrapper">
         <Alert/>
         <header>
-          <AccountsUIWrapper/>
+          <button onClick={this.handleGoogleSignIn}>
+            Login with Google
+          </button>
         </header>
         {this.props.content}
       </div>
