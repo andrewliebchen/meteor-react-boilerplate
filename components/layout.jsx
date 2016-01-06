@@ -16,8 +16,10 @@ Alert = React.createClass({
   },
 
   render() {
-    if(this.data.alert) {
-      return <p className="alert">{this.data.alert}</p>;
+    let {alert} = this.data;
+    
+    if(alert) {
+      return <p className="alert">{alert}</p>;
     } else {
       return false;
     }
@@ -44,6 +46,7 @@ Layout = React.createClass({
       <div className="wrapper">
         <Alert/>
         <header>
+          <a href="/">Home</a>
           <button onClick={this.handleGoogleSignIn}>
             Login with Google
           </button>
