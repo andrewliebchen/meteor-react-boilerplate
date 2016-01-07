@@ -59,7 +59,7 @@ Meteor.call('sendEmail', {
 
 Directory structure should be recognizable if you're familiar with Meteor.
 
-### `/components`
+#### `/components`
 
 As you're building your app, most of your time will be spent in `/components`. This directory will house all of your React components. Since Meteor is an isomorphic JS framework, we can include client- and server-side in the same file.
 
@@ -67,11 +67,11 @@ Generally you can have your React component, Flow Router routes, and server meth
 
 Maybe this is a bad idea, I don't know. Make your own boilerplate.
 
-### `/lib`
+#### `/lib`
 
 `/lib` contains a directory for React mixins. This ensures that mixins will be available before React components are loaded...
 
-### '/styles'
+#### `/styles`
 
 The boilerplate uses Sass, but feel free to remove the `fourseven:scss` package if you want to use Less or CSS only.
 
