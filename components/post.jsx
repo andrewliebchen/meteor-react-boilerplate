@@ -5,7 +5,12 @@ PostContent = React.createClass({
 
   handleLike() {
     Meteor.call('likePost', this.props.post._id, (error, success) => {
-      Session.set('alert', `You liked ${this.props.post.title}`);
+      if(success) {
+        Session.set('alert', {
+          status: 'success',
+          message: `You liked ${this.props.post.title}`
+        });
+      }
     });
   },
 
@@ -16,10 +21,14 @@ PostContent = React.createClass({
         <h2>
           <a href={`/${post._id}`}>{post.title}</a>
         </h2>
-        <article>{post.content}</article>
-        <p>
-          <a onClick={this.handleLike}>{post.likes} Likes</a>
-        </p>
+        <article className="post-content">{post.content}</article>
+        <div className="well well-sm">
+          <a
+            className="btn btn-default btn-sm"
+            onClick={this.handleLike}>
+            {post.likes} Likes
+          </a>
+        </div>
       </div>
     );
   }
@@ -31,7 +40,7 @@ SinglePost = React.createClass({
   getMeteorData() {
     let post = Posts.findOne();
     DocHead.setTitle(`${post.title} on Meteor React Boilerplate`);
-    
+
     return {
       post: post
     };

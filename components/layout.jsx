@@ -1,31 +1,3 @@
-Alert = React.createClass({
-  mixins: [ReactMeteorData],
-
-  getMeteorData() {
-    return {
-      alert: Session.get('alert')
-    };
-  },
-
-  componentDidUpdate() {
-    if(this.data.alert) {
-      setTimeout(() => {
-        Session.set('alert', null);
-      }, 5000);
-    }
-  },
-
-  render() {
-    let {alert} = this.data;
-    
-    if(alert) {
-      return <p className="alert">{alert}</p>;
-    } else {
-      return false;
-    }
-  }
-});
-
 Layout = React.createClass({
   mixins: [AccountActionsMixin],
 
@@ -39,19 +11,29 @@ Layout = React.createClass({
       type: "image/png",
       href: "/favicon.png "
     });
+    DocHead.addMeta({
+      name: "viewport",
+      content: "width=device-width, initial-scale=1"
+    });
   },
 
   render() {
     return (
       <div className="wrapper">
-        <Alert/>
-        <header>
-          <a href="/">Home</a>
-          <button onClick={this.handleGoogleSignIn}>
-            Login with Google
-          </button>
+        <header className="navbar navbar-default navbar-static-top">
+          <div className="container">
+            <a href="/" className="navbar-brand">Home</a>
+            <button
+              className="btn btn-default navbar-btn"
+              onClick={this.handleGoogleSignIn}>
+              Login with Google
+            </button>
+          </div>
         </header>
-        {this.props.content}
+        <div className="container">
+          <Alert/>
+          {this.props.content}
+        </div>
       </div>
     );
   }
