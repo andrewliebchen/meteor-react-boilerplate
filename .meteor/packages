@@ -30,7 +30,6 @@ cosmos:browserify
 
 momentjs:moment
 accounts-ui-unstyled
-accounts-google
 alanning:roles
 kadira:dochead
 

@@ -77,6 +77,23 @@ The boilerplate uses Sass, but feel free to remove the `fourseven:scss` package 
 
 ## Dependencies & packages
 
+Here's a few more packages included (that haven't been mentioned already)...
+
+Package | Description
+fourseven:scss | Sass and SCSS support for Meteor.js (with autoprefixer and sourcemaps).
+kadira:dochead | Isomorphic way to manipulate document.head for Meteor apps
+kadira:flow-router | Carefully Designed Client Side Router for Meteor
+momentjs:moment | Parse, validate, manipulate, and display dates - official Meteor packaging
+npm-container | Contains all your npm dependencies
+stevezhu:lodash | A utility library delivering consistency, customization, performance, & extras.
+
 ## Deployment
 
+Until MDG discontinues it, you can always deploy for free by runing `meteor deploy`. More about [Meteor deployment](http://guide.meteor.com/deployment.html).
+
+Coming soon...one click deployment to Heroku.
+
 ## Acknowledgements
+
+* [Ryan Glover](https://twitter.com/rglover) AKA [The Meteor Chef](https://themeteorchef.com/) always provides solutions and inspiration. How do you do it? Seriously, this guy puts a [massive amount of time](https://docs.google.com/spreadsheets/d/1aSwgJRngLpx-anWAzuG7s_hqcjMwlnLdLNJyYhzH4eY/edit#gid=0) into each recipe.
+* [Sacha Greif](http://sachagreif.com/) and his [Telescope](https://github.com/TelescopeJS/Telescope). If you ever need to know how to do something in Meteor, a solution is probably in Telescope's source.
