@@ -1,4 +1,8 @@
-@import '{dyaa:bootstrap-sass-only}/bootstrap';
+// Packages
+@import "{dyaa:bootstrap-sass-only}/bootstrap";
+
+// App partials
+@import "dropdown";
 
 .post-content {
   margin-bottom: 2em;

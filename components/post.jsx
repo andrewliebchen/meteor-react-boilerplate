@@ -21,6 +21,10 @@ PostContent = React.createClass({
         <h2>
           <a href={`/${post._id}`}>{post.title}</a>
         </h2>
+        <Dropdown toggle="Options">
+          <DropdownItem>Dropdown item 1</DropdownItem>
+          <DropdownItem>Dropdown item 2</DropdownItem>
+        </Dropdown>
         <article className="post-content">{post.content}</article>
         <div className="well well-sm">
           <a

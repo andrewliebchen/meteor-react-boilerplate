@@ -1,0 +1,34 @@
+$dropdownTransition: all 0.15s ease-in-out;
+
+%dropdown-menu-out {
+  opacity: 0.01;
+  transform: translate3d(0, -1em, 0);
+}
+
+%dropdown-menu-in {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+// Override Bootstrap's CSS-based display method
+.dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu-enter {
+  @extend %dropdown-menu-out;
+
+  &.dropdown-menu-enter-active {
+    @extend %dropdown-menu-in;
+    transition: $dropdownTransition;
+  }
+}
+
+.dropdown-menu-leave {
+  @extend %dropdown-menu-in;
+
+  &.dropdown-menu-leave-active {
+    @extend %dropdown-menu-out;
+    transition: $dropdownTransition;
+  }
+}
