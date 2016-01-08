@@ -32,6 +32,8 @@ Account services set up links:
 * [Google Developers Console](https://console.developers.google.com/)
 * [Twitter Apps](https://apps.twitter.com/)
 
+Alternatively, if you don't want to use the Service Configuration package, you can use the `<AccountsUIWrapper/>` component. This is a simple React wrapper around the Blaze accounts UI component.
+
 ### User roles
 
 If you're building an application that requires user roles, I've included [Roles](https://atmospherejs.com/alanning/roles), a great package for creating, validating, and managing user roles. Once you've created at least one user via your UI or in `meteor shell`, you can promote that user to an admin by opening `meteor shell`, finding the ID of the user you want to promote, then run:
