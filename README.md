@@ -67,6 +67,38 @@ As you're building your app, most of your time will be spent in `/components`. T
 
 Generally you can have your React component, Flow Router routes, and server methods in the same file. This is pretty sweet because it represents a true _separation of concerns_ because each _file_ contains everything necessary for that component to function!
 
+For example:
+
+```js
+Widget = React.createClass({
+  handleWidgetClick() {
+    Meteor.call('updateWidget');
+  },
+
+  render() {
+    return (
+      <div onClick={this.handleWidgetClick} className="widget">
+    );
+  }
+});
+
+if(Meteor.isClient) {
+  FlowRouter.route('/widgets/:_id', {
+    action(id) {
+      ReactLayout.render(Widget);
+    });
+  });
+}
+
+if(Meteor.isServer) {
+  Meteor.methods({
+    updateWidget() {
+      return Widgets.update(...);
+    }
+  });
+}
+```
+
 Maybe this is a bad idea, I don't know. Make your own boilerplate.
 
 #### `/lib`
