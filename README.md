@@ -114,12 +114,16 @@ The boilerplate uses Sass, but feel free to remove the `fourseven:scss` package 
 Here's a few more packages included (that haven't been mentioned already)...
 
 Package | Description
+------- | -----------
 fourseven:scss | Sass and SCSS support for Meteor.js (with autoprefixer and sourcemaps).
 kadira:dochead | Isomorphic way to manipulate document.head for Meteor apps
 kadira:flow-router | Carefully Designed Client Side Router for Meteor
 momentjs:moment | Parse, validate, manipulate, and display dates - official Meteor packaging
-npm-container | Contains all your npm dependencies
+meteorhacks:npm | Use npm modules with your Meteor App
 stevezhu:lodash | A utility library delivering consistency, customization, performance, & extras.
+dyaa:bootstrap-sass-only | Bootstrap with Sass-files only. React should handle many of the interface actions instead of Bootstrap's JS.
+email | Send email messages
+q42:react-markdown | React component to parse markdown in Meteor
 
 ## Deployment
 
