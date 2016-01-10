@@ -28,10 +28,11 @@ PostContent = React.createClass({
         <article className="post-content">
           <InlineEdit
             defaultValue={post.content}
-            method=""
+            method="editPost"
             id={post._id}
             type="textarea"
-            placeholder="Click to add post"/>
+            placeholder="Click to add post"
+            successMessage={`${post.title} has been updated!`}/>
         </article>
         <div className="well well-sm">
           <a
@@ -80,7 +81,18 @@ if(Meteor.isClient) {
 
 if(Meteor.isServer) {
   Meteor.methods({
+    editPost(args) {
+      check(args, {
+        id: String,
+        value: String
+      });
+      return Posts.update(args.id, {
+        $set: {content: args.value}
+      })
+    },
+
     likePost(id) {
+      check(id, String);
       return Posts.update(id, {
         $inc: {likes: 1}
       });

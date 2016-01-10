@@ -4,7 +4,8 @@ InlineEdit = React.createClass({
     method: React.PropTypes.string,
     id: React.PropTypes.string,
     type: React.PropTypes.oneOf(['input', 'textarea']),
-    placeholder: React.PropTypes.string
+    placeholder: React.PropTypes.string,
+    successMessage: React.PropTypes.string
   },
 
   getDefaultProps() {
@@ -37,7 +38,10 @@ InlineEdit = React.createClass({
           value: this.state.text
         }, (error, success) => {
           if(success){
-            Session.set('toast', this.props.toast);
+            Session.set('alert', {
+              status: 'success',
+              message: this.props.successMessage
+            });
             this.setState({
               editing: false
             });
