@@ -64,7 +64,9 @@ npm-container@1.2.0
 npm-mongo@1.4.39_1
 observe-sequence@1.0.7
 ordered-dict@1.0.4
+perak:markdown@1.0.5
 promise@0.5.1
+q42:react-markdown@0.0.3
 random@1.0.5
 rate-limit@1.0.0
 react@0.14.3

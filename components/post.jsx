@@ -25,7 +25,14 @@ PostContent = React.createClass({
           <DropdownItem>Dropdown item 1</DropdownItem>
           <DropdownItem>Dropdown item 2</DropdownItem>
         </Dropdown>
-        <article className="post-content">{post.content}</article>
+        <article className="post-content">
+          <InlineEdit
+            defaultValue={post.content}
+            method=""
+            id={post._id}
+            type="textarea"
+            placeholder="Click to add post"/>
+        </article>
         <div className="well well-sm">
           <a
             className="btn btn-default btn-sm"
