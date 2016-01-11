@@ -127,9 +127,15 @@ q42:react-markdown | React component to parse markdown in Meteor
 
 ## Deployment
 
+### meteor.com
+
 Until MDG discontinues it, you can always deploy for free by runing `meteor deploy`. More about [Meteor deployment](http://guide.meteor.com/deployment.html).
 
-Coming soon...one click deployment to Heroku.
+### Heroku
+
+Set up a (free) [Heroku account](https://id.heroku.com/) and deploy:
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 ## Acknowledgements
 

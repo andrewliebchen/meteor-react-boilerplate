@@ -1,0 +1,15 @@
+{
+  "name": "Meteor/React Boilerplate",
+  "description": "Get your Meteor/React project started in two shakes of a lamb's tail",
+  "repository": "https://github.com/andrewliebchen/meteor-react-boilerplate",
+  "keywords": ["meteor", "reactjs", "boilerplate"],
+  "env": {
+    "BUILDPACK_URL": "https://github.com/jordansissel/heroku-buildpack-meteor.git",
+    "ROOT_URL": {
+      "description": "Unless you have custom domain, it will be your Heroku app name + .herokuapp.com"
+    }
+  },
+  "addons": [
+    "mongolab"
+  ]
+}
