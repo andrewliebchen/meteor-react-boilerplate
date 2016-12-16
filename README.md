@@ -1,6 +1,6 @@
 # Meteor/React boilerplate
 
-** React is rapidly changing, so this boilerplate might not be relevant anymore... **
+**React is rapidly changing, so this boilerplate might not be relevant anymore...**
 
 MeteorJS and ReactJS go together like peas and carrots, peanut butter and jelly, or peanut butter and chocolate. Unfortunately, getting an app up and running on this combination not straightforward. I've collected some of the repetitive boilerplate set up into this repo, and try to hint how I like to organize projects.
 
